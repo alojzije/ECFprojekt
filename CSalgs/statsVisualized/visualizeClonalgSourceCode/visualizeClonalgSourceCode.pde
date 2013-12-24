@@ -18,17 +18,19 @@ float volumeIntervalMinor = 5;
 
 float tabLeft, tabRight;
 float[] tabTop, tabBottom;
-float tabPad = 10;
+float tabPad = 16;
 
 String[] descriptionLong ={"Average stats for the Static Cloning CLONALG1 version of CLONALG", 
                           "Average stats for the Proportional Cloning CLONALG1 version of CLONALG",
                             "Average stats for the Static Cloning CLONALG2 version of CLONALG",
-                        "Average stats for the Proportional Cloning CLONALG2 version of CLONALG",};
+                          "Average stats for the Proportional Cloning CLONALG2 version of CLONALG",
+                        "Average stats for the Opt-IA"};
                         
 String[] descriptionShort ={"Static Cloning CLONALG1", 
                           "Proportional Cloning CLONALG1",
                             "Static Cloning CLONALG2",
-                            "Proportional Cloning CLONALG2"};
+                            "Proportional Cloning CLONALG2",
+                          "Opt-Ia"};
 
 
 Integrator[] interpolators;
@@ -37,7 +39,7 @@ PFont plotFont;
 
 
 void setup() {
-  size(820, 605);
+  size(820, 655);
  
   
   data = new FloatTable("AllAvgStats.tsv");
@@ -124,7 +126,7 @@ void drawTitleTabs() {
   
   tabLeft = plotX2 + 20; 
   tabTop[0] = plotY1;
-  tabBottom[0] = plotY1 + textAscent() + 15;
+  tabBottom[0] = plotY1 + textAscent() + 14;
   String title = data.getColumnName(0);
   float titleWidth = textWidth(title);
   tabRight = tabLeft + tabPad + titleWidth + tabPad;
@@ -134,13 +136,13 @@ void drawTitleTabs() {
       fill(100);
       text(descriptionShort[col], tabLeft , tabTop[col] - 5);
     } else if( col % 3 == 0 && col != 0){
-      tabTop[col] = tabBottom[col-1] + 35;
-      tabBottom [col] =  tabTop[col] + textAscent() + 15; 
+      tabTop[col] = tabBottom[col-1] + 34;
+      tabBottom [col] =  tabTop[col] + textAscent() + 14; 
       fill(100);
       text(descriptionShort[int(col/3)], tabLeft , tabTop[col] - 5);
     } else if ( col != 0){ 
       tabTop[col] = tabBottom[col-1] + 2;
-      tabBottom [col] =  tabTop[col] + textAscent() + 15;
+      tabBottom [col] =  tabTop[col] + textAscent() + 14;
     }  
   
     title = data.getColumnName(col);
@@ -153,7 +155,7 @@ void drawTitleTabs() {
     
     // If the current tab, use black for the text, otherwise use dark gray
     fill(col == currentColumn ? 0 : 64);
-    text(title, tabLeft + tabPad, tabTop[col] + 15);
+    text(title, tabLeft + tabPad, tabTop[col] + 17);
  
       
   }

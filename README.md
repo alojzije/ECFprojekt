@@ -5,7 +5,9 @@ This repository contains algorithm implementations for ECFramework and their ave
 
 Algorithms implemented :
 	Artificial Bee Colony Algorithm (ABC),
-	Clonal Selection Algorithm (CLONALG)
+	Clonal Selection Algorithm (CLONALG),
+	Optimization Immune Algorithm (opt-IA)
+
 
 
 ==========
