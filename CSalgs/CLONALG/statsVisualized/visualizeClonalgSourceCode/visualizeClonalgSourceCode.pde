@@ -20,11 +20,15 @@ float tabLeft, tabRight;
 float[] tabTop, tabBottom;
 float tabPad = 10;
 
-String[] descriptionLong ={"Average stats for the Static Cloning CLONALG2 version of CLONALG",
+String[] descriptionLong ={"Average stats for the Static Cloning CLONALG1 version of CLONALG", 
+                          "Average stats for the Proportional Cloning CLONALG1 version of CLONALG",
+                            "Average stats for the Static Cloning CLONALG2 version of CLONALG",
                         "Average stats for the Proportional Cloning CLONALG2 version of CLONALG",};
                         
-String[] descriptionShort ={"Static Cloning CLONALG2",
-                            "Proportional Cloning CLONALG2",};
+String[] descriptionShort ={"Static Cloning CLONALG1", 
+                          "Proportional Cloning CLONALG1",
+                            "Static Cloning CLONALG2",
+                            "Proportional Cloning CLONALG2"};
 
 
 Integrator[] interpolators;
